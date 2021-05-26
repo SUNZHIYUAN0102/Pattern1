@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pattern1.Data;
 
-namespace Pattern1.Migrations.ApplicationDbContext2Migrations
+namespace Pattern1.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext2))]
-    [Migration("20210526105850_AddUser2")]
-    partial class AddUser2
+    [DbContext(typeof(ApplicationDbContext1))]
+    [Migration("20210526120822_AddUser1")]
+    partial class AddUser1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,7 @@ namespace Pattern1.Migrations.ApplicationDbContext2Migrations
             modelBuilder.Entity("Pattern1.Models.User", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");

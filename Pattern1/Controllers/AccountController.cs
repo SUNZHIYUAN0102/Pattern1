@@ -28,6 +28,8 @@ namespace Pattern1.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.User1 = context1.Users;
+            ViewBag.User2 = context2.Users;
             return View();
         }
 
@@ -50,7 +52,7 @@ namespace Pattern1.Controllers
  
                 var user = new User
                 {
-              
+                    Id = id,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Email = model.Email,
